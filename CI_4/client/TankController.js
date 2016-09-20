@@ -70,4 +70,8 @@ class TankController {
       }.bind(this), 300);
     }
   }
+
+  xoa(){
+    this.sprite.destroy();
+  }
 }

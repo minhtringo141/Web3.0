@@ -22,6 +22,11 @@ class InputController{
     }
 
     this.tankController.move(direction);
+    var tankPosition = this.tankController.sprite.position;
+    TankOnline.client.move({
+      direction : direction,
+      position : tankPosition
+    });
 
     if(TankOnline.keyboard.isDown(this.keymap.fire)){
       this.tankController.fire();

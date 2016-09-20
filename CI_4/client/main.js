@@ -51,26 +51,6 @@ var preload = function(){
 
 var create = function() {
 
-  var xx = Math.floor((Math.random() * window.innerWidth));
-  var yy = Math.floor((Math.random() * window.innerHeight));
-
-
-
-  for(var i=0;i<TankOnline.map.length;i++){
-    for(var j=0;j<TankOnline.map[i].length;j++){
-      if(TankOnline.map[i][j] == 1){
-        if( j*16 < xx < j*16 + 25 || j*16 - 25 < xx < j*16  ){
-          xx = Math.floor((Math.random() * window.innerWidth));
-        }
-        if(i*16 < yy < i*16 + 25 || i*16 - 25 < yy < i*16){
-          yy = Math.floor((Math.random() * window.innerHeight));
-        }
-      }
-    }
-  }
-
-  TankOnline.client = new Client(xx, yy);
-
 
   TankOnline.game.physics.startSystem(Phaser.Physics.ARCADE);
   TankOnline.keyboard = TankOnline.game.input.keyboard;
@@ -89,6 +69,10 @@ var create = function() {
     }
   }
 
+  var newTankPosition = new Phaser.Point(
+    Math.random()*window.innerWidth,
+    Math.random()*window.innerHeight
+  );
 
   TankOnline.inputControllers = [];
   TankOnline.inputControllers.push(
@@ -100,14 +84,17 @@ var create = function() {
         right : Phaser.KeyCode.RIGHT,
         fire  : Phaser.KeyCode.SPACEBAR
       },
-      new TankController(TankOnline.inputControllers.length, xx, yy,
-                      TankOnline.tankGroup, TankOnline.bulletGroup)
+      new TankController(
+        TankOnline.inputControllers.length,
+        newTankPosition.x,
+        newTankPosition.y,
+        TankOnline.tankGroup,
+        TankOnline.bulletGroup)
     )
   );
-
+  TankOnline.client = new Client(newTankPosition);
 
 }
-
 
 
 var update = function(){
@@ -141,4 +128,43 @@ var onBulletHitTank = function(bulletSprite, tankSprite){
     bulletSprite.kill();
     tankSprite.kill();
   }
+}
+/*
+  Events
+*/
+TankOnline.otherTanks = {};
+TankOnline.onNewPlayerJoined = function(msg){
+  TankOnline.otherTanks[msg.id] = new TankController(
+    msg.id,
+    msg.x,
+    msg.y,
+    TankOnline.tankGroup,
+    TankOnline.bulletGroup
+  )
+}
+
+TankOnline.onReceivedTanksInfo = function(msg){
+  for(key in msg){
+    if (msg.hasOwnProperty(key)){
+      TankOnline.otherTanks[msg[key].id] = new TankController(
+        msg[key].id,
+        msg[key].x,
+        msg[key].y,
+        TankOnline.tankGroup,
+        TankOnline.bulletGroup
+      )
+    }
+  }
+}
+
+TankOnline.onPlayerTankMoved = function(msg){
+  if(TankOnline.otherTanks[msg.id]){
+    TankOnline.otherTanks[msg.id].sprite.position = msg.position;
+    TankOnline.otherTanks[msg.id].move(msg.direction);
+  }
+}
+
+TankOnline.onPlayerDisconnect = function(msg){
+  TankOnline.otherTanks[msg].xoa();
+  delete otherTanks[msg];
 }
