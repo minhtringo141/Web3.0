@@ -1,0 +1,151 @@
+
+body {
+	background-image: url("index.png");
+}
+
+.header {
+	position: fixed;
+    background:#ffffff;
+    width: 100%;
+    height: 60px;
+    padding-top:14px;
+    padding-bottom: 10px;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.col-md-3 input {
+	width: 200px;
+}
+
+#box{
+    height: 30px;
+    border: 1px solid #ececec;
+}
+label[for="box"]{
+    height: 0px;
+    right: 13px;
+    bottom: 6px;
+    position: relative;
+}
+span.glyphicon.glyphicon-search{
+    position: absolute;
+    top:30%;
+    right:30%;
+}
+
+.logo {
+	padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.hotgirls {
+	padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left
+}
+
+.col-lg-3 {
+	display: inline-block;
+}
+
+.header_button {
+	display: inline-block;
+	width: 33px;
+    height: 33px;
+    margin: -2px;
+    border: none;
+}
+
+.camera{
+    background-color: #00a0c6;
+    color: #ffffff;
+}
+.menu{
+    background-color: #ffffff;
+    color: #c5c5c5;
+    border: 1px solid #ececec;
+}
+
+.content{
+    margin-top: 80px;
+}
+
+.post-img {
+
+    position: relative;
+
+}
+
+.post-img > img:first-child{
+    width:100%;
+}
+
+.post-img:hover{
+    cursor: pointer;
+}
+
+.post-img:hover .post-add,.post-img:hover .post-img-view{
+    display: block;
+    opacity: 1;
+}
+
+
+.post-add{
+    display: none;
+    opacity: 0;
+    position:absolute;
+    top: 15px;
+    left:15px;
+}
+
+
+.post-img-view{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left:20px;
+    bottom: 0px;
+    
+
+
+}
+.post-img-view div{
+	float:left;
+    color:#fff;
+}
+.post-img-view div img{
+    margin: 7px auto;
+    display:block;
+}
+.post-img-view div p{
+    text-align: center;
+    font-weight: 450;
+}
+.oval{
+    margin-right:10%;
+    width:50px;
+    height: 50px;
+    background-color: #464646;
+    float: left;
+    border-radius: 50%;
+}
+.title{
+    background-color: #fff;
+    padding:20px;
+
+}
+.title h4{
+    margin-bottom:0px;
+    margin-top:7px;
+    
+}
+.post-title p{
+    color:#9d9d9d;
+}
+.text{
+    text-align: justify;
+}
