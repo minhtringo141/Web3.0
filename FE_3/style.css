@@ -88,7 +88,7 @@ span.glyphicon.glyphicon-search{
     cursor: pointer;
 }
 
-.post-img:hover .post-add,.post-img:hover .post-img-view{
+.post-img:hover .post-add,.post-img:hover .view{
     display: block;
     opacity: 1;
 }
@@ -103,25 +103,22 @@ span.glyphicon.glyphicon-search{
 }
 
 
-.post-img-view{
+.view{
     display: none;
     opacity: 0;
     position: absolute;
     left:20px;
     bottom: 0px;
-    
-
-
 }
-.post-img-view div{
+.view div{
 	float:left;
     color:#fff;
 }
-.post-img-view div img{
+.view div img{
     margin: 7px auto;
     display:block;
 }
-.post-img-view div p{
+.view div p{
     text-align: center;
     font-weight: 450;
 }
