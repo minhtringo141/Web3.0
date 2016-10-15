@@ -130,6 +130,10 @@ body{
   overflow: auto;
 }
 
+.girl_info_container .col-xs-12 {
+  color: #363636;
+}
+
 .poster_avatar{
   width: 42px;
   height: 42px;
@@ -139,6 +143,7 @@ body{
 
 .girl_info_container h4{
   margin: 0;
+  color: #2e2e2e;
 }
 
 .girl_info_container small{
@@ -215,10 +220,75 @@ body{
   margin-top: 0
 }
 
+.footer {
+  text-align: center;
+  
+}
+
+.line {
+  width: 500px;
+  border-bottom: 3px solid #a1a1a1;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.circle_little {
+  background-color: #707070;
+  background-image: -moz-linear-gradient(45deg, #a1a1a1 25%, #707070);
+  background-image: -webkit-linear-gradient(45deg, #a1a1a1 25%, #707070);
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  opacity: 0.1;
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-animation: move 1s infinite linear;
+  -webkit-animation: move 1s infinite linear;
+  display: inline-block;
+  
+}
+
+#block_1 {
+    -moz-animation-delay: .1s;
+    -webkit-animation-delay: .1s;
+}
+
+#block_2 {
+    -moz-animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+}
+
+#block_3 {
+    -moz-animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+}
 
 
+@-moz-keyframes move {
+    0% {
+        -moz-transform: scale(1.2);
+        opacity: 1;
+    }
 
+    100% {
+        -moz-transform: scale(0.7);
+        opacity: 0.1;
+    };
+}
 
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(0.7);
+        opacity: 0.1;
+    };
+}
 
 @media screen and (max-width: 768px){
   .header{
@@ -227,5 +297,23 @@ body{
 
   body{
     padding: 0;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 940px){
+  .header{
+    position: static;
+  }
+
+  body{
+    padding: 0;
+  }
+
+  .line {
+    display: none;
   }
 }

@@ -1,19 +1,21 @@
+var masonryInitialized = false;
+var isLoading = false;
 $(document).ready(function(){
 	var source   = $("#girl_item_template").html();
 	var girlItemTemplate = Handlebars.compile(source);
-	
+    
     requestNextPage(girlItemTemplate);
 
     $(window).on('scroll', function(){
-        if($(document).height() <= $(window).scrollTop() + $(window).height() + 500){
-           requestNextPage(girlItemTemplate);   
-        }
+        // if($(document).height() <= $(window).scrollTop() + $(window).height() + 500){
+        //    requestNextPage(girlItemTemplate);   
+        // }
     });
 });
 
 
-var isLoading = false;
-var masonryInitialized = false;
+
+
 var requestNextPage = function(girlItemTemplate){
 
     if(isLoading) return;
@@ -21,9 +23,9 @@ var requestNextPage = function(girlItemTemplate){
 
     $.ajax({
         type    :'GET',
-        url     :'../imagesData.json',
+        url     :'http://techkids.vn:4949/hotgirls/page/1',
     }).done(function(data){
-        var $newItems = $(girlItemTemplate(data));
+        var $newItems = $(girlItemTemplate(data.items));
         $("#girl_item_container").append($newItems);
         if(masonryInitialized){
             $("#girl_item_container").masonry('appended', $newItems);
@@ -36,8 +38,6 @@ var requestNextPage = function(girlItemTemplate){
                 percentPosition: true
             });
         }
-
-        
     }).fail(function(error){
         console.log(error);
     }).always(function(){
