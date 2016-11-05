@@ -1,0 +1,100 @@
+%!Adobe-FontList 1.14
+%Locale:0x411
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialNarrow-Bold
+FamilyName:Arial Narrow
+StyleName:Bold
+FullName:Arial Narrow Bold
+MenuName:Arial Narrow
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\Dropbox\8dee web 2\Font\Arial Narrow Bold.ttf
+DataFormat:sfntData
+FileLength:139056
+FileModTime:1401933090
+WeightClass:700
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialNarrow-Italic
+FamilyName:Arial Narrow
+StyleName:Italic
+FullName:Arial Narrow Italic
+MenuName:Arial Narrow
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:E:\Dropbox\8dee web 2\Font\Arial Narrow Italic.ttf
+DataFormat:sfntData
+FileLength:141328
+FileModTime:1401933088
+WeightClass:400
+WidthClass:3
+AngleClass:1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ArialNarrow
+FamilyName:Arial Narrow
+StyleName:Regular
+FullName:Arial Narrow
+MenuName:Arial Narrow
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Dropbox\8dee web 2\Font\Arial Narrow Regular.ttf
+DataFormat:sfntData
+FileLength:134188
+FileModTime:1401933171
+WeightClass:400
+WidthClass:3
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Helvetica-Bold
+FamilyName:Helvetica
+StyleName:Bold
+FullName:Helvetica Bold
+MenuName:Helvetica
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:E:\Dropbox\8dee web 2\Font\Helvetica-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:189288
+FileModTime:1391342190
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:VNF-Gotham
+FamilyName:VNF-Gotham
+StyleName:Regular
+FullName:VNF-Gotham
+MenuName:VNF-Gotham
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:E:\Dropbox\8dee web 2\Font\VNF-Gotham Book.ttf
+DataFormat:sfntData
+FileLength:161412
+FileModTime:1359004090
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+

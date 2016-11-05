@@ -1,0 +1,28 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: ArialNarrowItalic;
+    src: url("../img/Design/font/ArialNarrowItalic.ttf");
+}
+
+body {
+	background: #353c46
+}
+
+.test1 {
+	height: 100vh;
+	background: #c52b45;
+	position: relative;
+}
+
+.test2 {
+	height: 100vh;
+	background: #3dcb97;
+}
+
+
+

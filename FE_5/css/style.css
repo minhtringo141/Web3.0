@@ -220,6 +220,75 @@ body{
   margin-top: 0
 }
 
+.footer {
+  text-align: center;
+  
+}
+
+.line {
+  width: 500px;
+  border-bottom: 3px solid #a1a1a1;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.circle_little {
+  background-color: #707070;
+  background-image: -moz-linear-gradient(45deg, #a1a1a1 25%, #707070);
+  background-image: -webkit-linear-gradient(45deg, #a1a1a1 25%, #707070);
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  opacity: 0.1;
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-animation: move 1s infinite linear;
+  -webkit-animation: move 1s infinite linear;
+  display: inline-block;
+  
+}
+
+#block_1 {
+    -moz-animation-delay: .1s;
+    -webkit-animation-delay: .1s;
+}
+
+#block_2 {
+    -moz-animation-delay: .2s;
+    -webkit-animation-delay: .2s;
+}
+
+#block_3 {
+    -moz-animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+}
+
+
+@-moz-keyframes move {
+    0% {
+        -moz-transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        -moz-transform: scale(0.7);
+        opacity: 0.1;
+    };
+}
+
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(0.7);
+        opacity: 0.1;
+    };
+}
 
 @media screen and (max-width: 768px){
   .header{
@@ -246,62 +315,5 @@ body{
 
   .line {
     display: none;
-  }
-}
-
-.end_page_indicator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.end_page_bar {
-  height: 2px;
-  background: #333333;
-  flex: 1 1 auto;
- 
-
-}
-
-.loading_dots_container {
-  display: block;
-  text-align: center;
-  width: 120px;
-  margin: 0 auto;
-  padding: 10px 0;
-  flex: 0 0 auto
-}
-
-.loading_dots {
-  background: #333333;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 100%;
-  animation-name: loading_dots;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  vertical-align: middle;
-}
-
-.loading_dots:nth-child(2){
-  animation-delay: .2s;
-}
-
-.loading_dots:nth-child(3){
-  animation-delay: .4s;
-}
-
-
-
-/* crate animation name "loading_dots" */
-@keyframes loading_dots {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1
   }
 }

@@ -1,0 +1,297 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: ArialNarrowItalic;
+    src: url("../img/Design/font/ArialNarrowItalic.ttf");
+}
+
+
+ @font-face {
+    font-family: ArialNarrowRegular;
+    src: url("../img/Design/font/ArialNarrowRegular.ttf");
+}
+
+
+ @font-face {
+    font-family: VNF-GothamBook;
+    src: url("../img/Design/font/VNF-GothamBook.ttf");
+}
+
+
+
+/*header*/
+header {
+    background-image: url("../img/Design/cut/Splash.png");
+    background-position: top left;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 22px;
+
+  }
+
+  .header {
+	padding: 16px 0 13px 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .header_logo {
+    border-radius: 0;
+    padding-top: 18px;
+    float:left;
+
+  }
+
+  .header_menu * {
+    vertical-align: middle;
+  }
+  .header_menu {
+    border-radius: none;
+    /*font-size: 20px;*/
+    font-weight: 100;
+    padding-top: 18px;
+    border-bottom: none;
+    font-family: VNF-GothamBook;
+
+  }
+
+  .header_menu a {
+  	font-size: 20px;
+  }
+  .header.header_menu_button:hover {
+    text-decoration: overline;
+    font-weight: 200;
+    color: #ffffff;
+
+  }
+  .font_tittle_overlay:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .header_menu_button {
+    text-decoration: none;
+    color: #FFFFFF;
+
+  }
+
+  .header_user_share_button {
+    border: 0 none;
+    color: #ffffff;
+    float:left;
+    height: 100%;
+    width:46px;
+    margin-right: -69px;
+    padding-top: 22px;
+    padding-left: 96px;
+
+  }
+  .bottom_bar{
+    border-bottom: 1px solid #ececec;
+    padding-top: 75px;
+    margin-left:-86px;
+    position: relative;
+
+  }
+  .menu_fixed {
+    position: fixed;
+    z-index: 2
+  }
+/*header*/
+.banner {
+	position: fixed;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 1;
+}
+
+.bottom_item {
+	line-height: 35px;
+	display: inline-block;;
+	border-radius: 50%;
+	background: #6f747b;
+	width: 70px;
+	height: 70px;
+	margin: 0 10px 0 10px;
+	position: relative;
+	opacity: 0.7
+}
+
+.bottom_item img {
+	position: absolute;
+	top: 20px;
+	right: 20px
+}
+
+
+
+.section1 {
+	height: 100vh;
+	background: #353c46;
+	position: relative;
+}
+
+.section2 {
+	height: 100vh;
+	background: #353c46;
+	position: relative;
+}
+
+.section3 {
+	height: 100vh;
+	background: #353c46;
+	position: relative;
+}
+
+.section4 {
+	height: 100vh;
+	background: #353c46;
+	position: relative;
+}
+
+.container-fluid {
+	height: 100vh;
+}
+
+.row1 {
+	position: absolute;
+	top: 20%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 30px;
+	font-family: ArialNarrowItalic;
+}
+
+.row2 {
+	display: flex;
+	position: absolute;
+	top:35%;
+	left: 0;
+	right: 0;
+	align-items:center;
+	background: #353c46
+}
+
+.staff_image img {
+	margin-left: auto;
+	margin-right: auto
+}
+
+.section2_script {
+	text-align: center;
+}
+
+
+
+
+
+.slick-prev {
+	float: right;
+}
+
+/*index2*/
+
+.row3 {
+	/*display: flex;*/
+	position: absolute;
+	top:35%;
+	left: 0;
+	right: 0;
+	align-items:center;
+	background: #353c46;
+
+}
+
+.app_image img {
+	margin-left: auto;
+	margin-right: auto
+}
+
+.row3 button {
+	background: #353c46;
+	border:0;
+}
+
+.row3 .col-md-1 .slick-prev {
+	position: absolute;
+	bottom: -460px;
+	left: 200px;
+}
+
+.row3 .col-md-1 .slick-next {
+	position: absolute;
+	bottom: -460px;
+	right: 200px;
+}
+
+.app_image_container {
+	color: #ffffff;
+	text-align: center;
+	font-family: ArialNarrowRegular;
+	font-size: 20px;
+
+}
+
+.on_app_slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #353c46;
+	/*display: none*/
+	z-index: 1
+}
+
+.center_image {
+	text-align: center;
+	top: 150px;
+	background: #353c46;
+}
+
+
+
+.prev_4 {
+	left: 120px;
+	top: 340px;
+}
+
+.next_4 {
+	top: 340px;
+	
+}
+
+button {
+	background: #353c46;
+	border: 0
+}
+
+.close {
+	position: absolute;
+	top: 100px;
+	left: 1450px;
+}
+
+.section4 {
+	display: none;
+}
+
+.section5 {
+	height: 100vh;
+	background: #c52b45;
+	position: relative;
+}
+
+.section6 {
+	height: 100vh;
+	background: #3dcb97;
+	position: relative;
+}
+
