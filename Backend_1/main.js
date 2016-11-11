@@ -28,21 +28,18 @@ for (var i = 2; i < process.argv.length - 1; i++) {
 var result = [];
 if (fileInput && fileOutput) {
     fileUtils.readMultiFile(inputFileArray, function(err, data) {
-    	var content = "";
+        var content = "";
 
-    	for (key in data){
-    		if(data.hasOwnProperty(key)){
-    			var temp = key + " " + data[key] + "\n";
-    			content += temp;
-    		}
-    	}
-    	fs.writeFile(process.argv[process.argv.length-1], content, function(err){
-            if(err){
+        for (key in data) {
+            if (data.hasOwnProperty(key)) {
+                var temp = key + " " + data[key] + "\n";
+                content += temp;
+            }
+        }
+        fs.writeFile(process.argv[process.argv.length - 1], content, function(err) {
+            if (err) {
                 console.error(err);
             }
         });
-
-    
-	});	
-
+    });
 }

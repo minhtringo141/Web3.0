@@ -1,0 +1,17 @@
+{
+  "name": "backend2",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Minh Trí <minhtringo141@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/minhtringo141/Web3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
