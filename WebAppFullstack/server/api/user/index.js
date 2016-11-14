@@ -1,12 +1,9 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./auth.controller');
+var controller = require('./user.controller');
 
 var router = express.Router();
-
-router.get('/all', controller.getAll);
-router.post('/login', controller.login);
 
 // homework
 router.get('/list', controller.list);
